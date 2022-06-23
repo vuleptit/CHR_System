@@ -1,0 +1,13 @@
+{
+    "db": {
+        "table_prefix": "",
+        "connection": {
+            "host": "",
+            "dbname": "",
+            "username": "",
+            "password": "",
+            "model": "",
+            "engine": ""
+        }
+    }
+}

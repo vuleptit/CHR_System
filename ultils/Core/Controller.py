@@ -1,0 +1,1 @@
+# Other controller will extend this class to have basic functions

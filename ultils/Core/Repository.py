@@ -1,0 +1,1 @@
+# Other repository will extend this class to have basic function: get, save, delete
