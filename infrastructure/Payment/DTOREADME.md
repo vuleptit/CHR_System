@@ -22,31 +22,3 @@ itemdto = ItemDto(
     location=Location("Vermillion City"),
     description="Fish for low-level Pokemon",
 )
-generated __repr__ method returns a string containing class name, field names and field representation
->>> print(itemdto)
-ItemDto(name='Old Rod', location=Location(name=Vermillion City), description='Fish for low-level Pokemon')
-generated __eq__ method compares the class tuples containing field values of the current and the other instance
-itemdto2 = ItemDto(
-    name="Old Rod",
-    location=Location("Vermillion City"),
-    description="Fish for low-level Pokemon",
-)
-
->>> itemdto == itemdto2
-True
-__eq__ method works the same as if we would explicitly declare it this way:
-def __eq__(self, other):
-    if other.__class__ is self.__class__:
-        return (self.name, self.location, self.description) == (other.name, other.location, other.description)
-    return NotImplemented
-it might be a good idea to make DTO instances immutable. It is possible by setting the argument frozen to True:
-@dataclass(frozen=True)
-class ItemDto:
-    name: str
-    location: Location
-    description: str = ""
-not iterable:
-...: for field in itemdto:
-...:     print(field)
-...: 
-TypeError: 'ItemDto' object is not iterable
