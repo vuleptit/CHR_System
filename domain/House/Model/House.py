@@ -1,0 +1,1 @@
+# This Entity class include businiess
